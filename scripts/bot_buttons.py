@@ -12,15 +12,17 @@ class Buttons:
         return ReplyKeyboardMarkup(
             [
                 [f"👤 Modello: {sd.model_name}"],
-                [f"🔢 Immagini da generare: {sd.iterations}"],
-                [f"🌄 Mostra anteprima: {'✅' if preview else '❌'}"],
-                [f"↕ Altezza: {sd.height}", f"↔ Larghezza: {sd.width}"],
+                [
+                    f"🔢 Generare: {sd.iterations}",
+                    f"🌄 Anteprima: {'✅' if preview else '❌'}",
+                ],
                 [
                     f"👣 Steps: {sd.steps}",
-                    f"📏 Cfg scale: {sd.cfg_scale}",
+                    f"📏 Cfg Scale: {sd.cfg_scale}",
                     f"🔮 Sampler: {sd.sampler_name}",
                 ],
-                [f"🪴 Reset seed: {sd.seed if sd.seed else '🎲'}"],
+                [f"🪴 Reset Seed: {sd.seed if sd.seed else '🎲'}"],
+                [f"↕ Altezza: {sd.height}", f"↔ Larghezza: {sd.width}"],
             ],
             resize_keyboard=True,
             one_time_keyboard=False,

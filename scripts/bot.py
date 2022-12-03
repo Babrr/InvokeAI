@@ -124,7 +124,7 @@ def make_image_callback(message, status_message, s):
             loop.run_until_complete(
                 message.reply_photo(
                     buf.getvalue(),
-                    f"Prompt: <code>/Genera {s['prompt']}</code>\n"
+                    f"Prompt: <code>{s['prompt']}</code>\n"
                     f"Model name: <code>{s['model']}</code>\n"
                     f"Steps: <code>{s['steps']}</code>\n"
                     f"Cfg Scale: <code>{s['scale']}</code>\n"
