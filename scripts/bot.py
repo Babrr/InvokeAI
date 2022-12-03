@@ -387,7 +387,7 @@ async def send_image(message: Message):
 @dp.callback_query_handler(IDFilter(user_id=OWNER_ID), Text(equals="genera"))
 async def callback_genera(callback: CallbackQuery):
     text = callback.message.caption
-    prompt = text.splitlines()[0][16:]
+    prompt = text.splitlines()[0][8:]
     await generate_image(callback.message, prompt)
 
 
